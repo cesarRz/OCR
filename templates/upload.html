@@ -1,0 +1,25 @@
+{% extends 'base.html'%}
+{% set active_page = "upload" %}
+
+{% block head %} 	
+<title>OCR</title>
+{% endblock %}
+
+{% block body %} 	
+
+<h1 id="main_title">Upload Your Picture to Get the Text</h1>
+
+
+<form id="center_form" action="/upload" method="POST" enctype="multipart/form-data">
+    <input id="image" name="image" type="file" class="custom-file-input">
+    <input type="submit" value="Obten el Texto" id="sub_button">
+</form>
+
+<span id="OCR-response">
+     {{image}}
+
+
+</span>
+
+
+{% endblock %}

@@ -1,0 +1,24 @@
+{% extends 'base.html'%}
+{% set active_page = "index" %}
+
+{% block head %} 	
+<title>Results</title>
+{% endblock %}
+
+{% block body %} 	
+
+<div id="left_search">
+    <a href="/"><img src="static/img/logo.png" id='logo_center'></a>
+    <h1 id="logo_text">Buscador</h1>
+    
+    <form action="/handle_data" method="post">
+        <input type="text" name="search_value" id="Search_input">
+        <input type="submit" value="Search">
+    </form>
+    <p id="res">Buscando iteraciones para {{search_value}} </p>
+</div>
+
+
+
+
+{% endblock %}
